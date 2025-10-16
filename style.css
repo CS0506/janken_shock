@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#game {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+#player-choice button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    background-color: #fff;
+    color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#player-choice button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#result-message {
+    font-weight: bold;
+}
+
+#computer-choice {
+    margin: 10px 0;
+}
+
+#cooking-suggestion {
+    color: #e74c3c;
+    font-style: italic;
+}
