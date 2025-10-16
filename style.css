@@ -19,7 +19,7 @@ h1 {
 }
 
 #player-choice button {
-    font-size: 1.2em;
+    font-size: 2.5em; /* Increased font size for emojis */
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
@@ -28,6 +28,7 @@ h1 {
     color: #3498db;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    line-height: 1; /* Adjust line height for better emoji alignment */
 }
 
 #player-choice button:hover {
@@ -38,6 +39,22 @@ h1 {
 #result {
     margin-top: 20px;
     font-size: 1.2em;
+    perspective: 500px; /* For 3D effect */
+}
+
+.result-anim {
+    animation: flip-in 0.5s ease-in-out;
+}
+
+@keyframes flip-in {
+    from {
+        transform: rotateX(90deg) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(0deg) scale(1);
+        opacity: 1;
+    }
 }
 
 #result-message {
@@ -51,4 +68,44 @@ h1 {
 #cooking-suggestion {
     color: #e74c3c;
     font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+#final-result-message {
+    font-size: 3em;
+    font-weight: bold;
+    color: #e74c3c;
+    animation: zoom-in-out 1s ease-in-out;
+}
+
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#start-screen button, #retry-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #2ecc71;
+    background-color: #fff;
+    color: #2ecc71;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#start-screen button:hover, #retry-button:hover {
+    background-color: #2ecc71;
+    color: #fff;
 }

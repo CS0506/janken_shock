@@ -8,20 +8,31 @@
 </head>
 <body>
     <h1>じゃんけんゲーム</h1>
-    <p>勝ったら外食！負けたら自炊！</p>
-    <div id="game">
+
+    <div id="start-screen">
+        <p>勝てば外食！</p>
+        <button id="start-button">ゲームスタート</button>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <p>あなたの手を選んでください</p>
         <div id="player-choice">
-            <p>あなたの手を選んでください</p>
-            <button id="rock">グー</button>
-            <button id="scissors">チョキ</button>
-            <button id="paper">パー</button>
+            <button id="rock">✊</button>
+            <button id="scissors">✌️</button>
+            <button id="paper">✋</button>
         </div>
         <div id="result">
+            <p>コンピュータの手: <span id="computer-choice-icon"></span></p>
             <p id="result-message"></p>
-            <p id="computer-choice"></p>
-            <p id="cooking-suggestion"></p>
+            <button id="retry-button-game" class="hidden">再挑戦する</button>
         </div>
     </div>
+
+    <div id="result-screen" class="hidden">
+        <p id="final-result-message">外食に行け！</p>
+        <button id="retry-button">再挑戦する</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
